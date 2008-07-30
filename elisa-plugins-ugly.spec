@@ -1,6 +1,6 @@
 %define debug_package	%{nil}
 
-%define rel	2
+%define rel	1
 
 %define svn	0
 %define pre	0
@@ -20,13 +20,9 @@
 %endif
 %endif
 
-# It's the same for releases, but different for pre-releases: please
-# don't remove, even if it seems superfluous - AdamW 2008/03
-%define fversion	0.3.5
-
 Summary:	'Ugly' plugins for the Elisa media center
 Name:		elisa-plugins-ugly
-Version:	0.3.4
+Version:	0.5.3
 Release:	%{release}
 # For SVN:
 # svn co https://code.fluendo.com/elisa/svn/trunk elisa
@@ -68,6 +64,6 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %{py_puresitedir}/elisa/plugins/*
-%{py_puresitedir}/elisa_plugins_ugly-%{fversion}-py%{pyver}.egg-info
-%{py_puresitedir}/elisa_plugins_ugly-%{fversion}-py%{pyver}-nspkg.pth
+%{py_puresitedir}/elisa_plugin_*-py%{pyver}.egg-info
+%{py_puresitedir}/elisa_plugin_*-py%{pyver}-nspkg.pth
 
