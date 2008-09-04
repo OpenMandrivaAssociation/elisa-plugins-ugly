@@ -15,14 +15,14 @@
 %define dirname		%name-%version.%pre
 %else
 %define release		%mkrel %rel
-%define distname	%name-%version.tar.gz
+%define distname	%name-%version-1.tar.gz
 %define dirname		%name-%version
 %endif
 %endif
 
 Summary:	'Ugly' plugins for the Elisa media center
 Name:		elisa-plugins-ugly
-Version:	0.5.7
+Version:	0.5.8
 Release:	%{release}
 # For SVN:
 # svn co https://code.fluendo.com/elisa/svn/trunk elisa
