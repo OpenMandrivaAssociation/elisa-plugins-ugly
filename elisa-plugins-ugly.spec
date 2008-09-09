@@ -15,14 +15,14 @@
 %define dirname		%name-%version.%pre
 %else
 %define release		%mkrel %rel
-%define distname	%name-%version-1.tar.gz
+%define distname	%name-%version.tar.gz
 %define dirname		%name-%version
 %endif
 %endif
 
 Summary:	'Ugly' plugins for the Elisa media center
 Name:		elisa-plugins-ugly
-Version:	0.5.8
+Version:	0.5.9
 Release:	%{release}
 # For SVN:
 # svn co https://code.fluendo.com/elisa/svn/trunk elisa
@@ -42,6 +42,8 @@ BuildRequires:	gstreamer0.10-python
 BuildRequires:	elisa-core >= %{version}
 Requires:	elisa-plugins-good >= %{version}
 Suggests:	twill
+# For LIRC input support
+Suggests:	python-lirc
 
 %description
 Elisa is a project to create an open source cross platform media center 
