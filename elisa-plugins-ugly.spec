@@ -22,11 +22,14 @@
 
 Summary:	'Ugly' plugins for the Elisa media center
 Name:		elisa-plugins-ugly
-Version:	0.5.18
+Version:	0.5.19
 Release:	%{release}
 # For SVN:
 # svn co https://code.fluendo.com/elisa/svn/trunk elisa
 Source0:	http://elisa.fluendo.com/static/download/elisa/%{distname}
+# From https://elisa.fluendo.com/quality/review/request/%3C20081106174059.32406.qmail@kantoor2.datux.nl%3E
+# Repeat signal detection for LIRC plugin - AdamW 2008/11
+Patch0:		elisa-plugins-ugly-0.5.19-lirc_repeat.patch
 License:	GPLv3 and MIT
 Group:		Development/Python
 URL:		http://elisa.fluendo.com/
@@ -51,6 +54,7 @@ solution. This package contains 'ugly' plugins for Elisa.
 
 %prep
 %setup -q -n %{dirname}
+%patch0 -p1 -b .repeat
 
 %build
 
