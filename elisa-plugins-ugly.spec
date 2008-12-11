@@ -39,7 +39,7 @@ BuildRequires:	python
 BuildRequires:	python-setuptools
 BuildRequires:	python-devel
 BuildRequires:	python-twisted
-BuildRequires:	ImageMagick
+BuildRequires:	imagemagick
 BuildRequires:	desktop-file-utils
 BuildRequires:	gstreamer0.10-python
 BuildRequires:	elisa-core >= %{version}
