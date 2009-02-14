@@ -22,7 +22,7 @@
 
 Summary:	'Ugly' plugins for the Elisa media center
 Name:		elisa-plugins-ugly
-Version:	0.5.25
+Version:	0.5.27
 Release:	%{release}
 # For SVN:
 # svn co https://code.fluendo.com/elisa/svn/trunk elisa
