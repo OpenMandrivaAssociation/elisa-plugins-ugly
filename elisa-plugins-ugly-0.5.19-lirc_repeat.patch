@@ -1,0 +1,25 @@
+--- elisa-plugins/elisa/plugins/lirc/lirc_input.py	2008-07-23 13:48:33 +0000
++++ elisa-plugins/elisa/plugins/lirc/lirc_input.py	2008-11-06 17:36:50 +0000
+@@ -37,6 +37,7 @@
+ 
+ import os
+ import pkg_resources
++import time
+ 
+ class NoMappingsFound(Exception):
+     """
+@@ -126,6 +127,12 @@
+ 
+ 
+     def _got_event(self, hex_key, repeat, key_value, remote):
++	#skip repeats for a certain amount of time
++	if repeat == '00':
++	    self.last_key_time = time.time()
++	elif ( time.time() - self.last_key_time ) < .5 :
++		return
++
+         if '*' in self.mappings:
+             # ignore remote name provided by LIRC and take first remote registered in the
+             # mappings
+
+
