@@ -32,7 +32,7 @@ Source0:	http://elisa.fluendo.com/static/download/elisa/%{distname}
 Patch0:		elisa-plugins-ugly-0.5.19-lirc_repeat.patch
 License:	GPLv3 and MIT
 Group:		Development/Python
-URL:		http://elisa.fluendo.com/
+URL:		https://elisa.fluendo.com/
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	python
