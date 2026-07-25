@@ -5,16 +5,16 @@
 %define svn	0
 %define pre	0
 %if %svn
-%define release		%mkrel 0.%svn.%rel
+%define release 1
 %define distname	%name-%svn.tar.lzma
 %define dirname		%name
 %else
 %if %pre
-%define release		%mkrel 0.%pre.%rel
+%define release 1
 %define distname	%name-%version.%pre.tar.gz
 %define dirname		%name-%version.%pre
 %else
-%define release		%mkrel %rel
+%define release %rel.1
 %define distname	%name-%version.tar.gz
 %define dirname		%name-%version
 %endif
